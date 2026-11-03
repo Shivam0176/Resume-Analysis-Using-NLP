@@ -1,0 +1,22 @@
+{
+  "python": ["python", "python3"],
+  "machine learning": ["machine learning", "ml"],
+  "natural language processing": [
+    "natural language processing",
+    "nlp"
+  ],
+  "deep learning": ["deep learning"],
+  "sql": ["sql", "mysql", "postgresql"],
+  "javascript": ["javascript", "js"],
+  "java": ["java"],
+  "c++": ["c++","c / c++","c/c++"],
+  "pandas": ["pandas"],
+  "numpy": ["numpy"],
+  "scikit-learn": ["scikit-learn", "sklearn"],
+  "tensorflow": ["tensorflow"],
+  "pytorch": ["pytorch"],
+  "groq": ["groq", "groq llm api"],
+  "docker": ["docker"],
+  "aws": ["aws", "amazon web services"],
+  "git": ["git", "github", "gitlab"]
+}
