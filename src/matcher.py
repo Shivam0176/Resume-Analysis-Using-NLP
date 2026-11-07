@@ -1,14 +1,14 @@
 from functools import lru_cache
 
-from sentence_transformers import SentenceTransformer
-from sklearn.metrics.pairwise import cosine_similarity
 from src.ner_extractor import extract_entities
-from src.skill_extractor import compare_skill_sets,extract_hybrid_skills
+from src.skill_extractor import compare_skill_sets, extract_hybrid_skills
 
 
 @lru_cache(maxsize=1)
 def load_model():
-    '''caching the embedding model to reuse later'''
+    """Load and cache the embedding model only when inference is needed."""
+    from sentence_transformers import SentenceTransformer
+
     return SentenceTransformer("all-MiniLM-L6-v2")
 
 def calculate_semantic_score(
@@ -22,10 +22,7 @@ def calculate_semantic_score(
         normalize_embeddings=True
         )
 
-        similarity = float(cosine_similarity(
-              [embeddings[0]],
-              [embeddings[1]]
-        )[0][0])
+        similarity = float(embeddings[0] @ embeddings[1])
 
         score = max(0.0,min(100.0,similarity * 100))
         return round(float(score),2)

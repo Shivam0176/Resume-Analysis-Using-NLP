@@ -161,3 +161,4 @@ if st.button("Analyze Match", type="primary"):
 
     except Exception as error:
         st.error(f"Analysis failed: {error}")
+

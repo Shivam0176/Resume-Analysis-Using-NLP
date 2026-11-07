@@ -1,0 +1,30 @@
+{
+  "pair_count": 50,
+  "label_source": "synthetic_category_heuristic",
+  "score_thresholds": {
+    "low": "score < 40",
+    "medium": "40 <= score < 70",
+    "high": "score >= 70"
+  },
+  "hybrid_weights": {
+    "semantic": 0.6,
+    "skills": 0.4
+  },
+  "methods": {
+    "tfidf": {
+      "accuracy": 0.3,
+      "spearman_correlation": 0.6164,
+      "mean_score": 6.09
+    },
+    "semantic_embeddings": {
+      "accuracy": 0.28,
+      "spearman_correlation": 0.515,
+      "mean_score": 35.43
+    },
+    "hybrid": {
+      "accuracy": 0.3,
+      "spearman_correlation": 0.4476,
+      "mean_score": 21.84
+    }
+  }
+}

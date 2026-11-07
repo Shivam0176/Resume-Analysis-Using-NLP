@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+*.pyc
+
+# Keep personal and raw source documents out of version control.
+data/raw/**/*
+!data/raw/**/.gitkeep
+sample_pdf/*.pdf
+
+# The archive and processed resume text may contain personal information.
+archive (6)/
+data/processed/*.csv
