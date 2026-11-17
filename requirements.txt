@@ -1,4 +1,3 @@
-streamlit
 pypdf
 python-docx
 transformers
@@ -6,3 +5,7 @@ torch
 sentence-transformers
 scikit-learn
 pytest
+fastapi
+uvicorn[standard]
+python-multipart
+httpx
